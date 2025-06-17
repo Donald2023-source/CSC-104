@@ -1,17 +1,14 @@
 ------ Aaron -----
-*Added savings account feature (logic)
-
+\*Added savings account feature (logic)
 
 ----Simon-----
-*Added Savings account Page
-
+\*Added Account.py to manage general account logic
 
 ----- Laolu -----
-*Added Account.py to manage general account login
+\*Added Savings account Page
 
 ----- Isaac ------
-*Added Current Account page
-
+\*Added Current Account page
 
 ----- Donald -------
-*Edited Home.py
+\*Edited Home.py

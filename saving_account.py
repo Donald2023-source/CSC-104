@@ -2,7 +2,7 @@ from account import Account
 
 class SavingAccount(Account):
     def __init__(self, balance, limit=500000):
-        Account().__init__(balance)
+        Account.__init__(self, balance)
         self.limit = limit
 
 

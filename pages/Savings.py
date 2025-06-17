@@ -1,12 +1,12 @@
 import streamlit as st
-from savings_account import SavingsAccount
+from saving_account import SavingAccount
 
 
 cols1, cols2, cols3 = st.columns(3)
 
 # st.set_page_config("BANK APP", layout="centered", )
 
-savings = SavingsAccount(300000)
+savings = SavingAccount(300000)
 cols1.markdown(
     """
     <style>

@@ -11,3 +11,7 @@
 
 ----- Isaac ------
 *Added Current Account page
+
+
+----- Donald -------
+*Edited Home.py

@@ -5,7 +5,7 @@ class CurrentAccount(Account):
         Account.__init__(self, balance)
 
     def withdraw(self, amount):
-        if amount < 6000:
+        if amount < self.balance:
             super().withdraw(amount)
         else:
             print("Withdrawal amount exceeds the limit of N6000 for Current Account.")

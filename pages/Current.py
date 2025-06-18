@@ -52,7 +52,12 @@ with st.form('current_form'):
 if submit and operations == 'withdraw':
     with st.spinner(' Processing... '):
         current.withdraw(amount)
-        st.write(f"New Balance: N{current.balance}")
+        if(amount > current.balance):
+            st.markdown(f"<p style='color: red;'>Insufficient funds for withdrawal.</p>", unsafe_allow_html=True)
+        else:
+            st.markdown(f"<p style='color: green; font-weight: 600'>Withdrawal Successful", unsafe_allow_html=True)     
+            st.markdown(f"<p style='color: green;'>Your New balance is: N{current.balance}</p>", unsafe_allow_html=True)     
+
 if submit and operations == "deposit":
     with st.spinner("Please wait ...."):
         current.deposit(amount)

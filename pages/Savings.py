@@ -53,6 +53,7 @@ if submit and operations == 'withdraw':
     with st.spinner(' Processing... '):
         savings.withdraw(amount)
         st.write(f"New Balance: N{savings.balance}")
+
         if amount > savings.balance:
             st.markdown(f"<p style='color: red;'>Insufficient funds for withdrawal.</p>", unsafe_allow_html=True)
         elif amount > 6000:
@@ -60,6 +61,7 @@ if submit and operations == 'withdraw':
         else:
             st.write(f"Withdrawal was successful!.")
             st.write(f"New Balance: {savings.balance}")
+            
 if submit and operations == "deposit":
     with st.spinner("Please wait ...."):
         savings.deposit(amount)

@@ -35,6 +35,7 @@ st.markdown(
 )
 
 
+
 st.markdown(f"""
 <div class="card" style="display: flex; margin: 20px 0; width: 100%; background: #7F00FF; border-radius: 16px; padding: 3rem; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); flex-direction: column; align-items: center; justify-content: center;">   
     <h5 style="text-align:left">Savings Account</h5>
@@ -59,9 +60,9 @@ if submit and operations == 'withdraw':
         elif amount > 6000:
             st.markdown(f"<p style='color: red;'>Withdrawal amount cannot be above N6,000.</p>", unsafe_allow_html=True)
         else:
-            st.write(f"Withdrawal was successful!.")
-            st.write(f"New Balance: {savings.balance}")
-            
+            st.markdown(f"<p style='color: green; font-weight: 600'>Withdrawal successfull</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='color: green;'>Your new balance: N{savings.balance}</p>", unsafe_allow_html=True)
+
 if submit and operations == "deposit":
     with st.spinner("Please wait ...."):
         savings.deposit(amount)
